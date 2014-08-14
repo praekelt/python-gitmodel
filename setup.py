@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-    name='python-gitmodel',
-    version='0.1dev',
+    name='praekelt-python-gitmodel',
+    version='0.1',
     test_suite='gitmodel.test',
     packages=[
         'gitmodel',
