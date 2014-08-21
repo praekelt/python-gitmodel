@@ -1,6 +1,6 @@
 from contextlib import contextmanager
 from importlib import import_module
-from time import time
+from time import time, sleep
 import logging
 import os
 
@@ -318,7 +318,7 @@ class Workspace(object):
                 msg = ("Lock wait timeout exceeded while trying to acquire "
                        "lock '{}' on {}").format(id, self.path)
                 raise exceptions.LockWaitTimeoutExceeded(msg)
-            time.sleep(self.config.LOCK_WAIT_INTERVAL)
+            sleep(self.config.LOCK_WAIT_INTERVAL)
 
         # The blob itself is not important, just the fact that the ref exists
         emptyblob = self.create_blob('')
