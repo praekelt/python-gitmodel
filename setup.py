@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='praekelt-python-gitmodel',
-    version='0.1.1',
+    version='0.1.2',
     test_suite='gitmodel.test',
     packages=[
         'gitmodel',
