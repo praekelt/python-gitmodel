@@ -31,7 +31,7 @@ def serialize(obj, fields=None, stream=None, **options):
 
     pyobj = python.serialize(obj, fields)
 
-    json.dump(pyobj, stream, cls=GitModelJSONEncoder, **options)
+    json.dump(pyobj, stream, cls=GitModelJSONEncoder, indent=4, **options)
     if return_string:
         return stream.getvalue()
     return stream
